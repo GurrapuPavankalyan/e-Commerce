@@ -1,0 +1,132 @@
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: whitesmoke;
+}
+
+.login-form {
+    background: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .form-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .form-button {
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .form-button:hover {
+    background: #5753d7;
+  }
+
+  .toggle-form {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6c63ff;
+    cursor: pointer;
+  }
+
+  .toggle-form:hover {
+    color: #5753d7;
+  }
+
+  .header-container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border: black;
+    background-color: white;
+  }
+
+  .company-logo {
+    height: 15vh;
+  }
+
+  .cart-logo {
+    height: 15vh;
+  }
+
+  .user-icon  {
+    height: 10vh;
+  }
+
+  .cart-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart {
+    font-size: larger;
+    padding-right: 8px;
+  }
+
+  .search-bar {
+    width: 40vw;
+    height: 30px;
+    padding: 4px;
+    padding-left: 8px;
+    font-size: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(201, 246, 224);
+    
+  }
+
+  .search-icon {
+    height: 40px;
+    border: 2px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .searchbar-container {
+    display: flex;
+    align-items: center;
+    border: 2px black;
+  }
