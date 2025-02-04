@@ -86,24 +86,37 @@
 
   .company-logo {
     height: 15vh;
+    padding-left: 10px;
   }
 
   .cart-logo {
-    height: 15vh;
+    height: 4vh;
+    padding-right: 10px;
   }
 
   .user-icon  {
-    height: 10vh;
+    height: 7vh;
+  }
+
+  .cart-logo-container {
+    /*border: 2px solid blue;*/
   }
 
   .cart-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .cart {
     font-size: larger;
-    padding-right: 8px;
+    padding-right: 30px;
+    font-style: bold;
+  }
+
+  .home {
+    font-size: larger;
+    font-style: bold;
   }
 
   .search-bar {
@@ -129,4 +142,50 @@
     display: flex;
     align-items: center;
     border: 2px black;
+  }
+
+  .product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to new rows */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Aligns items centrally */
+    /*max-width: 1200px; /* Optional: set a max width */
+    margin: 0; /* Center container on the page */
+    width: 100%; /* Ensures full-width responsiveness */
+    padding: 10px; /* Adds padding inside the container */
+    box-sizing: border-box; /* Prevents padding from breaking layout */
+    /*border: 2px dashed red;*/
+  }
+
+
+  .product-card {
+    width: calc(25% - 16px); /* 4 cards per row, accounting for gap */
+    /*min-width: 200px; /* Prevents cards from shrinking too small */
+    max-width: 300px; /* Controls max size */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /*border-radius: 8px;*/ /* Optional: adds rounded corners */
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding doesn’t break layout */
+    flex: 1 1 auto; /* Makes items flexible */
+    /*border: 2px solid blue;*/
+    margin: 8px;
+  }
+
+
+  .product-image {
+    width: 100%; /* Makes image scale with card */
+    /*height: auto; /* Maintains aspect ratio */
+    height: 200px; /* Optional: limits height */
+    object-fit: contain; /* Prevents distortion */
+    margin-bottom: 10px; /* Adds spacing below the image */
+    /*border: 2px solid green;*/
+  }
+
+
+  .main-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to new rows */
+    width: 100%; /* Ensures full-width responsiveness */
+    /*border: 2px dashed red;*/
   }
