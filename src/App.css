@@ -98,10 +98,6 @@
     height: 7vh;
   }
 
-  .cart-logo-container {
-    /*border: 2px solid blue;*/
-  }
-
   .cart-container {
     display: flex;
     align-items: center;
@@ -161,7 +157,7 @@
   .product-card {
     width: calc(25% - 16px); /* 4 cards per row, accounting for gap */
     /*min-width: 200px; /* Prevents cards from shrinking too small */
-    max-width: 300px; /* Controls max size */
+    width: 300px; /* Controls max size */
     padding: 10px;
     border: 1px solid #ccc;
     /*border-radius: 8px;*/ /* Optional: adds rounded corners */
@@ -188,4 +184,64 @@
     flex-wrap: wrap; /* Allows cards to wrap to new rows */
     width: 100%; /* Ensures full-width responsiveness */
     /*border: 2px dashed red;*/
+  }
+
+  .Product-details {
+    padding: 10px;
+    /*border: 2px solid red;*/
+  }
+
+  .product-price {
+    font-size: 20px;
+  }
+
+  .product-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 2px solid red;*/
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    margin: 5px;
+    /*border: 2px solid red;*/
+  }
+
+  .add-to-cart {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: orange;
+    color: white;
+    border: none;
+    margin: 5px;
+  }
+
+  .buy-now {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+  }
+
+  .cart-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .cart-item {
+    margin: 10px;
+  }
+
+  .cart-image-container {
+    display: flex;
+    width: 100px;
+    height: 150px;
   }
