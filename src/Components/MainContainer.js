@@ -5,7 +5,7 @@ const MainContainer = () => {
 
   return (
     <div className='main-container'>
-        <ProductCard />
+      <ProductCard />
     </div>
   );
 };
