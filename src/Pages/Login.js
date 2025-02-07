@@ -2,14 +2,16 @@ import React, { useState, useRef } from 'react';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../Utils/firebase';
 import checkValidateData from '../Utils/checkValidateData';
-import addUser from '../Utils/userSlice';
-import { useDispatch } from 'react-redux';
+import {addUser} from '../Utils/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import checkSignInValidateData from '../Utils/checkSignInValidData';
 import '../App.css';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  //const dispatch = useDispatch();
+
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isSignInForm, setIsSignInForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -49,8 +51,8 @@ const Login = () => {
       }).then(() => {
         // Profile updated!
         const { uid, email, displayName } = auth.currentUser;
-        //dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
-        //navigate("/browse");
+        dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
+        navigate("/home");
       }).catch((error) => {
         // An error occurred
         setErrorMessage(error.message);
@@ -66,7 +68,9 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
       // Signed in 
-      const user = userCredential.user;  
+      //const user = userCredential.user;  
+      const { uid, email, displayName } = auth.currentUser;
+      dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
       navigate("/home");
       })
       .catch((error) => {
@@ -81,6 +85,8 @@ const Login = () => {
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   }
+
+  console.log(errorMessage);
 
   return (
     <div className='login-container'>
