@@ -232,31 +232,46 @@
 
   .cart-item-container{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 0;
-    
+    margin-right:5px;
+    /*border: 2px solid red;*/
   }
 
   .cart-item {
     display: flex;
-    flex-direction: column;
     padding: 10px;
-    margin: 10px;
+    margin-left:120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
     border: 2px solid #ccc;
+    justify-content: start;
+    align-items: center;
+
+    width: 900px; /* Controls max size */
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 8px;*/ /* Optional: adds rounded corners */
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding doesn’t break layout */
+    /*flex: 1 1 auto; /* Makes items flexible */
+    /*border: 2px solid blue;*/
   }
 
   .cart-image-container {
+    margin: 10px;
     display: flex;
-    width: 100px;
-    height: 150px;
+    width: 150px;
+    height: 200px;
   }
 
   .quantity-container {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    margin-left: 10px;
   }
 
   .decrement-quantity, .increment-quantity {
@@ -267,11 +282,20 @@
     border-radius: 25px;
   }
 
+  .image-quantity-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin: 10px;
+  }
+
   .item-quantity {
     margin-left: 2px;
     margin-right: 2px;
     border: 1px solid #ccc;
-    width: 50px;	
+    width: 80px;	
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -292,4 +316,70 @@
   .remove:hover {
     color: black;
     background-color: orangered;
+  }
+
+  .main-cart-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    width: 100%;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .price-details-container {
+    width: 100%;
+    margin-right: 10px;
+    /*border: 2px solid red;*/
+  }
+
+  .price-details {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ccc;
+    box-sizing: border-box; /* Ensures padding doesn’t break layout */
+    position: relative;
+    padding: 10px;
+    margin-right: 120px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .title-price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 50px;
+  }
+
+  .text-decoration {
+    text-decoration: line-through;
+  }
+
+  .place-order-button-container {
+    height: 50px;
+    border: 1px solid #ccc;
+    width: 900px;
+    margin-left:120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    z-index: 10;
+    transition: position 0.3s ease-in-out;
+    display: flex;
+    justify-content: end;
+  }
+
+  .place-order-button {
+    background-color: orangered;
+    color: white;
+    width: 150px;
+    border: none;
+  }
+
+  .discount-span, .delivery-charges-span, .text-decoration, .total-amount-span {
+    color: green;
   }

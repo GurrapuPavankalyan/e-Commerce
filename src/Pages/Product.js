@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../Components/Header';
 import { PRODUCTS_API } from '../Utils/constants';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../Utils/cartSlice'; // Update this path based on your file structure
 
 const Product = () => {
+  
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams(); 
   const [product, setProduct] = useState(null);
     
@@ -42,13 +44,20 @@ const Product = () => {
             <img src={product.image} alt={product.name} className='product-image' />
             <div className='button-container'>
               <button className='add-to-cart' onClick={()=>{
-                dispatch(addToCart({
-                  id: product.id,
-                  title: product.title,
-                  price: product.price,
-                  image: product.image,
-                  quantity: 1,
-                }))
+                try{
+                  dispatch(addToCart({
+                    id: product.id,
+                    title: product.title,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1,
+                  }));
+                  console.log('navigating to cart');
+                  navigate('/cart');
+                }catch(error){
+                  console.log(error.message);
+                }
+                
                 }}
               >
                 Add to Cart
