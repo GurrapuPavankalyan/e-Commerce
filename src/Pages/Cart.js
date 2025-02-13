@@ -50,12 +50,12 @@ const Cart = () => {
                 <div className='price-details-container'>
                     <div className='price-details'>
                         <h2>PRICE DETAILS</h2>
-                        <p>Price:  ₹
-                            {cartItems.reduce((total, item) => Math.round(total + item.price * item.quantity * 85), 0)}
+                        <p>Price:  <span className='price-span'>₹
+                            {cartItems.reduce((total, item) => Math.round(total + item.price * item.quantity * 85), 0)}</span>
                         </p>
-                        <p>Discount:  -₹{cartItems.reduce((total, item) => Math.round(total + item.price * item.quantity * 85 * 0.3), 0)}</p>
-                        <p>Delivery Charges: <span className='text-decoration'>₹120</span> Free</p>
-                        <h3>Total Amount: ₹{cartItems.reduce((total, item) => Math.round(total + item.price * item.quantity * 85 * 0.7), 0)}</h3>
+                        <p>Discount:  <span className='discount-span'>-₹{cartItems.reduce((total, item) => Math.round(total + item.price * item.quantity * 85 * 0.3), 0)}</span></p>
+                        <p>Delivery Charges: <span className='text-decoration'>₹120</span> <span className='delivery-charges-span'>Free</span></p>
+                        <h3>Total Amount: <span className='total-amount-span'>₹{cartItems.reduce((total, item) => Math.round(total + item.price * item.quantity * 85 * 0.7), 0)}</span></h3>
                     </div> 
                 </div>    
             </div>
