@@ -379,7 +379,3 @@
     width: 150px;
     border: none;
   }
-
-  .discount-span, .delivery-charges-span, .text-decoration, .total-amount-span {
-    color: green;
-  }
