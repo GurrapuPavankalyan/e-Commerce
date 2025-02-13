@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../Utils/cartSlice'; // Update this path based on your file structure
 
 const Product = () => {
-  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams(); 
