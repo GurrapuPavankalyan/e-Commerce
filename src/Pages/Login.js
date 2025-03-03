@@ -24,7 +24,7 @@ const Login = () => {
     // Validate Login Form
 
     if(!isSignInForm){
-      const message = checkValidateData(email.current.value, password.current.value, mobileNumber.current.value, username.current.value);
+      const message = checkValidateData(email.current?.value || "", password.current?.value || "", mobileNumber.current?.value || "", username.current?.value || "");
       setErrorMessage(message);
       console.log(setErrorMessage);
 
@@ -34,7 +34,7 @@ const Login = () => {
         setErrorMessage(!errorMessage);
       }
     }else{
-      const signInMessage = checkSignInValidateData(email.current.value, password.current.value);
+      const signInMessage = checkSignInValidateData(email.current?.value || "", password.current?.value || "");
       setErrorMessage(signInMessage);
 
       if(signInMessage) return;
@@ -42,16 +42,16 @@ const Login = () => {
     
 
     if(!isSignInForm){
-      createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+      createUserWithEmailAndPassword(auth, email.current?.value, password.current?.value)
       .then((userCredential) => {
         // Signed up 
       const user = userCredential.user;
       updateProfile(user, {
-        displayName: username.current.value,
+        displayName: username.current?.value,
       }).then(() => {
         // Profile updated!
         const { uid, email, displayName } = auth.currentUser;
-        dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
+        dispatch(addUser({ uid: uid, email: email, displayName: displayName, mobileNumber: mobileNumber.current?.value }));
         navigate("/home");
       }).catch((error) => {
         // An error occurred
@@ -65,7 +65,7 @@ const Login = () => {
       });
     } else {
       // Sign In logic
-      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+      signInWithEmailAndPassword(auth, email.current?.value, password.current?.value)
       .then((userCredential) => {
       // Signed in 
       //const user = userCredential.user;  

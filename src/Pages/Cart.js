@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Components/Header';
-import { useDispatch, useSelector, useState } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { decrementQuantity, incrementQuantity, removeItem } from '../Utils/cartSlice';
 
@@ -42,7 +42,7 @@ const Cart = () => {
                             ))
                             }
                             <div className='place-order-button-container'>
-                                <button className='place-order-button'>PLACE ORDER</button>
+                                <button className='place-order-button' onClick={()=>{navigate('/checkout')}}>PLACE ORDER</button>
                             </div>
                         </div>
                     )}
