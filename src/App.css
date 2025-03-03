@@ -82,6 +82,10 @@
     display: flex;
     border: black;
     background-color: white;
+    position: sticky;
+    height: 15vh;
+    top: 0;
+    z-index: 10;
   }
 
   .company-logo {
@@ -329,6 +333,8 @@
   .price-details-container {
     width: 100%;
     margin-right: 10px;
+    position: sticky;
+    top: 0;
     /*border: 2px solid red;*/
   }
 
@@ -337,7 +343,6 @@
     flex-direction: column;
     border: 2px solid #ccc;
     box-sizing: border-box; /* Ensures padding doesn’t break layout */
-    position: relative;
     padding: 10px;
     margin-right: 120px;
     margin-left: 10px;
@@ -383,3 +388,352 @@
   .discount-span, .delivery-charges-span, .text-decoration {
     color: green;
   }
+
+  .checkout-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    margin-top: 0px;
+    height: fit-content;
+    /*max-height: calc(100% - 104.25);*/
+    
+  }
+
+  .checkout-details {
+    margin-left: 120px;
+    margin-top: 10px;
+    height: 700px;
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: none;
+    /*border: 2px solid #ccc;*/
+    /*padding: 10px;*/
+  }
+
+  .login-details-container, .delivery-address-container, .order-summary-container, .payment-option-container {
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /*padding: 10px;*/
+    gap: 10px;
+    background-color: honeydew;
+  }
+
+  .login-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout-login {
+    display: flex;  /* Enables Flexbox */
+    justify-content: space-between;  /* Pushes items to start & end */
+    align-items: center;  /* Centers items vertically */
+    width: 100%;  /* Full width */
+    padding: 0px;  /* Adds some spacing */
+   /* Rounded corners */
+   background-color: blueviolet;
+  }
+
+  .login {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Space between index and text */
+    margin: 10px;
+    color: #fff;
+  }
+
+
+  /*.index {
+    border: black;
+    width: 20px;
+    background-color: whitesmoke;
+    color: #5753d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }*/
+
+  .user-name {
+    align-self: first baseline;
+    margin-top: -30px;
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+  .Change-button {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .checkout-address {
+    display: flex;  /* Enables Flexbox */
+    justify-content: space-between;  /* Pushes items to start & end */
+    align-items: center;  /* Centers items vertically */
+    width: 100%;  /* Full width */
+   /* Adds some spacing */
+   background-color: blueviolet;
+   padding: 0px;
+   margin: 0px;
+   height: 50px;
+  }
+
+  .address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+
+  .delivery-address-container {
+    display: flex;
+    flex-direction: column;
+    background-color: honeydew;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .order-summary-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-container {
+    width:100%;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #ccc; /* Fixed */
+  }
+
+  .order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
+    padding: 10px;
+    color: #fff;
+    background-color: blueviolet;
+    height: 50px;
+    
+  }
+
+  .order-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border:2px black;
+  }
+
+  .order-item {
+    display: flex;
+    justify-self: start;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border:2px black;
+  }
+
+  .order-image-container {
+    height: 150px;
+    width: 100px;
+    aspect-ratio: 1;
+  }
+
+  .delivery-time {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .delivery-time p {
+    margin: 0;
+    display: inline-block; 
+    /*flex-grow: 1;  Ensures equal spacing */
+  }
+
+  .order-quantity-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .order-quantity {
+    margin-left: 2px;
+    margin-right: 2px;
+    border: 1px solid #ccc;
+    width: 50px;	
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: 25px;
+    border-radius: 2px;
+    
+  }
+
+  .order-decrement-quantity, .order-increment-quantity {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .name-container, .country-details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .first-name, .last-name, .address, .apartment, .city, .country, .state, .postcode, .phonenumber {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+  }
+
+  /*.name-phonenumber-container {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .payment-option-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pay-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    align-self: start;
+    width: 100%;
+    color: #fff;
+    background-color: blueviolet;
+    height: 50px;
+    padding-left: 0px;
+  }
+
+  .pay-title p {
+    margin-left: 10px;
+  }
+
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  .pay-btn {
+    width: fit-content;
+    height: 40px;
+    width: 250px;
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    margin-bottom: 10px;
+    align-content: center;
+  }
+
+  .pay-btn:hover {
+    background-color: orangered;
+  }
+
+  .credit-card-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .card-number, .mm, .yy, .cvv, .first-name, .last-name {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .credit-pay-btn {
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    align-content: center;
+    margin: 5px;
+    margin-bottom: 10px;
+  }
+
+  .upi-details {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .upi-id {
+    padding: 10px;
+    margin: 5px;
+    width: 250px;
+  }
+
+  .verify-btn {
+    padding: 10px;
+    width: 90px;
+    height: 40px;
+    background-color: #5753d7;
+    color: #fff;
+    border: none;
+    align-content: center;
+    margin: 5px;
+  }
+
+  .upi-pay-btn {
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    align-content: center;
+    margin: 5px;
+  }
+
+  .cod-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cod-info {
+    border: 1px solid black;
+    height: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: bisque;
+    border-radius: 3px;
+    margin: 5px;
+    align-content: center;
+  }
+
+  .cod-btn {
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    align-content: center;
+    margin: 5px;
+  }
+
+
+  
+
+  
