@@ -16,6 +16,18 @@ const Header = () => {
   const dispatch = useDispatch();
   dispatch(status(showfilteredProducts));
 
+  // JavaScript: Calculate 15vh in pixels
+{/*function get15vh() {
+  const viewportHeight = window.innerHeight;
+  const value = 0.15 * viewportHeight;
+  console.log(`15vh = ${value}px`);
+  return value;
+  get15vh();
+}*/}
+
+
+
+
   // Fetch products only once when the component mounts
   useEffect(() => {
     const fetchProducts = async () => {

@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import './App.css';
+import CheckOut from './Pages/CheckOut';
 
 const App = () => {
 
@@ -24,7 +25,11 @@ const App = () => {
     {
       path: "/cart",
       element: <Cart />,
-    }
+    },
+    {
+      path: "/checkout",
+      element: <CheckOut />,
+    },
   ]);
 
   return (
